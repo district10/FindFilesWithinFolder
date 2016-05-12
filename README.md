@@ -8,7 +8,8 @@
   - [yhlleo/FindFilesWithinFolder: Find and generate a file list of the folder.](https://github.com/yhlleo/FindFilesWithinFolder), or a featured fork
   - [district10/FindFilesWithinFolder: Find and generate a file list of the folder.](https://github.com/district10/FindFilesWithinFolder)
 
-在查找文件时，对于子文件夹里的文件采用递归的方式获取。Windows 版本的利用递归实现，Linux 版本利用的是队列。
+在查找文件时，对于子文件夹里的文件采用递归的方式获取。
+Windows 版本的利用递归实现，Linux 版本利用的是队列。
 
 ## 编译
 
@@ -50,6 +51,14 @@ CMakeFiles/3.0.2/CompilerIdC/a.out
 CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c
 CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 CMakeFiles/3.0.2/CompilerIdCXX/a.out
+```
+
+It works like `find`:
+
+```bash
+# exactly same output
+file path/to/dir -type f | sort
+./FindFilesWithinFolder path/to/dir | sort
 ```
 
 ## References
